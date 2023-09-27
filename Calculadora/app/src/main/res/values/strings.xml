@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="xTVNumero">Escribe un numero</string>
+    <string name="xNum1">1</string>
+    <string name="xNum2">2</string>
+    <string name="xNum3">3</string>
+    <string name="xNum4">4</string>
+    <string name="xNum5">5</string>
+    <string name="xNum6">6</string>
+    <string name="xNum7">7</string>
+    <string name="xNum8">8</string>
+    <string name="xNum9">9</string>
+    <string name="xNum0">0</string>
+    <string name="xNumNM">N.M</string>
+    <string name="xBorrar">Borrar</string>
+    <string name="xNumFactorial">!</string>
+
+</resources>

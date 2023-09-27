@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/xTVtittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="84dp"
+        android:text="La solucion a la ecuacion cuadratica es"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/xTV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="26dp"
+        android:text="Sea C :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xTV" />
+
+    <TextView
+        android:id="@+id/xTV10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="34dp"
+        android:text="La solucion de X1 es:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xTV3" />
+
+    <TextView
+        android:id="@+id/xTVx1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="64dp"
+        android:text="La solucion de X1 es:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xTV3" />
+
+    <TextView
+        android:id="@+id/xTV11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="35dp"
+        android:text="La solucion de X2 es:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xTV10" />
+
+    <TextView
+        android:id="@+id/xTVx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="28dp"
+        android:text="La solucion de X2 es:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xTV10" />
+
+    <TextView
+        android:id="@+id/xTVc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:text="C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/xTV3"
+        app:layout_constraintTop_toBottomOf="@+id/xTVb" />
+
+    <TextView
+        android:id="@+id/xTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="26dp"
+        android:text="Sea B :"
+        app:layout_constraintBottom_toTopOf="@+id/xTV3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xTV2" />
+
+    <TextView
+        android:id="@+id/xTVb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="26dp"
+        android:text="B"
+        app:layout_constraintBottom_toTopOf="@+id/xTV3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/xTV"
+        app:layout_constraintTop_toBottomOf="@+id/xTV2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/xTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="10dp"
+        android:text="Sea A :"
+        app:layout_constraintBottom_toTopOf="@+id/xTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xTVtittle" />
+
+    <TextView
+        android:id="@+id/xTVa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="26dp"
+        android:text="A"
+        app:layout_constraintBottom_toTopOf="@+id/xTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/xTV2"
+        app:layout_constraintTop_toBottomOf="@+id/xTVtittle"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
