@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rodrigo Lopez Lopez" />
     <TextView
         android:id="@+id/xtv1"
         android:layout_width="wrap_content"

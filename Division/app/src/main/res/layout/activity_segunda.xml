@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/xtv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rodrigo Lopez Lopez" />
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textDivisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="21dp"
+            android:layout_y="100dp"
+            android:hint="Divisor"
+            android:text=""
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/textCociente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="80dp"
+            android:layout_y="70dp"
+            android:hint="Cociente"
+            android:text=""
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/textDividendo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="80dp"
+            android:layout_y="100dp"
+            android:hint="Dividendo"
+            android:background="@color/blue"
+            android:text=""
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/Res1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="80dp"
+            android:layout_y="120dp"
+
+            android:hint="Residuo 1"
+            android:text=""
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="77dp"
+            android:layout_y="79dp"
+            android:text="______________________" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="76dp"
+            android:layout_y="91dp"
+            android:text="|\n|" />
+    </AbsoluteLayout>
+</LinearLayout>

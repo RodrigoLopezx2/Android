@@ -11,10 +11,11 @@ import android.os.IBinder;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView jtv;
-    private Button jbn,stopButton,jbPause,jbResume;
+    private Button jbn, stopButton, jbPause, jbResume;
     MiCrono miCrono;
     boolean isBound = false;
 
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         jbn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 initCrono();
+                Toast.makeText(MainActivity.this, "Cronometro Iniciado",
+                        Toast.LENGTH_LONG).show();
             }
         });
         jbPause = (Button) findViewById(R.id.xbnP);
@@ -34,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 pauseCrono();
+                Toast.makeText(MainActivity.this, "Cronometro Pausado",
+                        Toast.LENGTH_LONG).show();
             }
         });
         jbResume = (Button) findViewById(R.id.xbnC);
@@ -41,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 resumeCrono();
+                Toast.makeText(MainActivity.this, "Cronometro Continuado",
+                        Toast.LENGTH_LONG).show();
             }
         });
 
@@ -48,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         stopButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 stopCrono();
+                Toast.makeText(MainActivity.this, "Cronometro Terminado",
+                        Toast.LENGTH_LONG).show();
             }
         });
         MiCrono.setUpdateListener(this);
@@ -80,13 +89,13 @@ public class MainActivity extends AppCompatActivity {
         startService(intent);
     }
 
-    private void pauseCrono(){
+    private void pauseCrono() {
         if (isBound && miCrono != null) {
             miCrono.pausarCrono();   // Llama al método público del servicio.
         }
     }
 
-    private void resumeCrono(){
+    private void resumeCrono() {
         if (isBound && miCrono != null) {
             miCrono.reanudarCrono();   // Llama al método público del servicio.
         }
