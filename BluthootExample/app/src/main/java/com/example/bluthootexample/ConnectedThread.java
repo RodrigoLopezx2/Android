@@ -54,7 +54,6 @@ public class ConnectedThread extends Thread {
         //We just want to get 1 temperature readings from the Arduino
         while (numberOfReadings < 1) {
             try {
-
                 buffer[bytes] = (byte) mmInStream.read();
                 String readMessage;
                 // If I detect a "\n" means I already read a full measurement

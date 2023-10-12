@@ -22,26 +22,19 @@ import java.util.ArrayList;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
-    Button jOnButton, jOffButton, jDiscoverButton, jPairedButton;
-    BluetoothAdapter jBlueAdapter;
+    Button btnPaired;
     ListView devicelist;
-    private static final int REQUEST_ENABLE_BT = 0;
-    private static final int REQUEST_DISCOVER_BT = 1;
+    private BluetoothAdapter bluetoothAdapter = null;
     private Set<BluetoothDevice> pairedDevices;
-    BluetoothAdapter bluetoothAdapter;
+    public static String EXTRA_ADDRESS = "device_address";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        jOnButton = (Button) findViewById(R.id.idBtnOnBT);
-//        jOffButton = (Button) findViewById(R.id.idBtnOffBT);
-//        jOffButton = (Button) findViewById(R.id.idBtnConect);
-//        jDiscoverButton = (Button) findViewById(R.id.idBtnDispBT);
-        jPairedButton = (Button) findViewById(R.id.button);
+        btnPaired = findViewById(R.id.button);
         devicelist = findViewById(R.id.listView);
-
-        jBlueAdapter = BluetoothAdapter.getDefaultAdapter();
+        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         //Adapter
         BluetoothManager bluetoothManager = getSystemService(BluetoothManager.class);
@@ -61,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(enableBtIntent, 1);
         }
 
-        jPairedButton.setOnClickListener(new View.OnClickListener() {
+        btnPaired.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pairedDevicesList();
@@ -91,11 +84,11 @@ public class MainActivity extends AppCompatActivity {
 
     private AdapterView.OnItemClickListener myListClickListener = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView<?> av, View v, int arg2, long arg3) {
-//            String info = ((TextView) v).getText().toString();
-//            String address = info.substring(info.length() - 17);
-//            Intent i = new Intent(MainActivity.this, Tacometro.class);
-//            i.putExtra(EXTRA_ADDRESS, address); //this will be received at ledControl (class) Activity
-//            startActivity(i);
+            String info = ((TextView) v).getText().toString();
+            String address = info.substring(info.length() - 17);
+            Intent i = new Intent(MainActivity.this, Tacometro.class);
+            i.putExtra(EXTRA_ADDRESS, address); //this will be received at ledControl (class) Activity
+            startActivity(i);
             Toast.makeText(getApplicationContext(), "Tratando de conectar", Toast.LENGTH_LONG).show();
         }
     };
